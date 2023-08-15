@@ -1,0 +1,13 @@
+{% for user in users %}
+    <tr>
+      <td>{{user.name}}</td>
+      <td>{{user.math}}</td>
+      <td>{{user.physics}}</td>
+      <td>{{user.chemistry}}</td>
+      <td>{{user.english}}</td>
+      <td>{{user.total_mark}}</td>            
+    </tr>
+{% endfor %}  
+
+
+document.location='{{url_for('edit_user.edit_student_box')}}
