@@ -16,8 +16,5 @@ def check_student():
     student = Student.query.all()
     return render_template('table_sql.html', users = student, column = column_lst)
 
-@check_user.route('/profile', methods = ["GET"])
-@login_required
-def profile():
-    return render_template('profile.html')
+
 

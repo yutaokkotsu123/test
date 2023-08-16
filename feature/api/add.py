@@ -20,22 +20,6 @@ def add_student():
         chemistry = request.form.get('chemistry')
         physics = request.form.get('physics')
         
-        
-        # if not math.isnumeric:
-        #     flash('Check your math !')
-        #     math = request.form.get('math')
-        #     return redirect(url_for('add_user.add_student_box'))
-        # if not str(english).isnumeric:
-        #     flash('Check your english !')
-        #     return redirect(url_for('add_user.add_student_box'))
-        # if not str(chemistry).isnumeric:
-        #     flash('Check your chemistry !')
-        #     return redirect(url_for('add_user.add_student_box'))
-        # if not str(physics).isnumeric:
-        #     flash('Check your physics')
-        #     return redirect(url_for('add_user.add_student_box'))
-            
-        
         total_mark = (float(english)+float(chemistry)+float(physics)+float(math))/4
         new_student = Student(name=name, math=math, english=english,
                             chemistry=chemistry, physics=physics,

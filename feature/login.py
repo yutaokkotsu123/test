@@ -40,12 +40,13 @@ def login_post():
     email = request.form.get('email')
     password = request.form.get('password')
     user = Register.query.filter_by(email=email).first()
-    if user and user.password==password:
-        login_user(user)
-        return redirect(url_for('initial'))
-    else:
-        flash('Check your email or password !')
-        return redirect(url_for('auth.login'))
+    if user: 
+        if user.password==password:
+            login_user(user)
+            return redirect(url_for('initial'))
+        else:
+            flash('Check your email or password !')
+            return redirect(url_for('auth.login'))
 
 @auth.route('/logout')
 @login_required

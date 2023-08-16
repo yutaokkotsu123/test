@@ -38,21 +38,6 @@ def edit_student_box():
             if physics is "":
                 physics = user.physics
                 
-            # If mark is string then anounce error
-            
-            # if not str(math).isnumeric:
-            #     flash('Check your math !')
-            #     return redirect(url_for('edit_user.edit_student_box'))
-            # if not str(english).isnumeric:
-            #     flash('Check your english !')
-            #     return redirect(url_for('edit_user.edit_student_box'))
-            # if not str(chemistry).isnumeric:
-            #     flash('Check your chemistry !')
-            #     return redirect(url_for('edit_user.edit_student_box'))
-            # if not str(physics).isnumeric:
-            #     flash('Check your physics')
-            #     return redirect(url_for('edit_user.edit_student_box')) 
-              
             # Set self in4 = input in4
             user.name = name
             user.math = float(math)

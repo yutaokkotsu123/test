@@ -38,12 +38,6 @@
                         <a href="{{url_for('check_user.check_student')}}" class="nav-link active">Student Table</a>
                     {% endif %}
                   </li>
-
-                  <li class="nav-item" style="color:white;">
-                    {% if current_user.is_authenticated %}
-                        <a href="{{url_for('check_user.profile')}}" class="nav-link">Profile</a>
-                    {% endif %}
-                  </li>
                 </ul>
               </div>
             </div>

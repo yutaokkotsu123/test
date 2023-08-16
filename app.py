@@ -4,10 +4,10 @@ from feature.api.add import add_user
 from feature.api.delete import delete_user
 from feature.api.edit import edit_user  
 from feature.login import auth  
-from flask_login import LoginManager, current_user, login_required
+from flask_login import LoginManager
 from extensions import db
 from models.user_login import Register
-import os
+
 
 app = Flask(__name__)
 app.register_blueprint(check_user)

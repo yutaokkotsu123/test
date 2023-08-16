@@ -68,16 +68,16 @@ span.psw {
 </style>
 </head>
   <body>
-
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+          <h2>{{ message }}</h2>
+        {% endfor %}
+    {% endif %}
+  {% endwith %}
   <form action="/login" method="post"> 
     <h2>LOGIN Student Management</h2>
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-          {% for message in messages %}
-            <h2>{{ message }}</h2>
-          {% endfor %}
-      {% endif %}
-    {% endwith %}
+    
     <div class="container">
       <label><b>Email :</b></label>
       <input type="email" placeholder="Enter Email" name="email" autofocus="True" required></br>
